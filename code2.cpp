@@ -2,8 +2,16 @@
 #include <math.h>
 using namespace std;
 int main(){
-    double i = 1, N;
+    double i = 2, N, a, b, m;
     cout << "N="; cin >> N;
-    cout << pow(N,(1.0/3.0));
+    cout <<"a="; cin>>a;
+    cout <<"b="; cin>>b;
+    m = a-b;
+    for ( ; i<=N; i++){
+        cout <<"a="; cin>>a;
+        cout <<"b="; cin>>b;
+        if ((a-b)<=m) m=a-b;
+    }
+    cout << "m="<<m;
     return 0;
 }

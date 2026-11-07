@@ -10,7 +10,7 @@ int main(){
     
     for ( ; n<=M ; n++) S += pow((n+1),n);
 
-    cout << S;
+    cout << "S="<< S;
 
     return 0;
 }
