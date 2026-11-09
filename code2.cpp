@@ -7,7 +7,7 @@ int main(){
     cout <<"a="; cin>>a;
     cout <<"b="; cin>>b;
     m = a-b;
-    for ( ; i<=N; i++){
+    for (i; i<=N; i++){
         cout <<"a="; cin>>a;
         cout <<"b="; cin>>b;
         if ((a-b)<=m) m=a-b;
