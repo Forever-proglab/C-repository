@@ -8,7 +8,7 @@ int main(){
 
     cout << "M="; cin>>M;
     
-    for ( ; n<=M ; n++) S += pow((n+1),n);
+    for (n; n<=M ; n++) S += pow((n+1),n);
 
     cout << "S="<< S;
 
