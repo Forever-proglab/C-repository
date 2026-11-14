@@ -3,16 +3,9 @@
 #include <string>
 using namespace std;
 int main(){
-    cout << "p\n";
-    cout << 'p'<< '\n';
-/*    struct array
-    {
-        double x[90];
-        int n;
-    };
-    array a;
-    cout << "n="<<a.n;
-    cout <<"a.x[5]="<< a.x[5];
-  */  
+    int N; 
+    cout <<"N="; cin >>N;
+    double a[N];
+    
     return 0;
 }
