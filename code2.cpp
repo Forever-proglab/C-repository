@@ -1,7 +1,10 @@
 #include <iostream>
 #include <math.h>
+#include <locale.h> 
 using namespace std;
 int main(){
+
+    setlocale(LC_ALL, "Russian");
     double m;
     int N, n;
 
@@ -17,12 +20,12 @@ int main(){
     for (n=0; n<N; n++){
         cout <<"b["<<n<<"]="; cin>>b[n];
     }
-    cout << "Elementy massiva a:\n";
+    cout << "Элементы массива a:\n";
     for (n=0; n<N; n++){
         cout <<a[n]<<" ";
     }
     cout << endl;
-    cout << "Elementy massiva b:\n";
+    cout << "Элементы массива b:\n";
     for (n=0; n<N; n++){
         cout <<b[n]<<" ";
     }
