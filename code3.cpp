@@ -6,18 +6,19 @@ bool is_composite(int n){
     if (n<=1){
         return false;
     }
-    for (int i=2; i<=n; i++){
-        if ( !(n % i) and n!=i) return true;
+    for (int i=2; i<=(pow(n, 0.5)+1); i++){
+        if ( !(n % i) and (n!=i)) return true;
     }
     return false;
 }
-int is_more(int n){
-    double S=(n*n);
+bool is_more(int n){
+    double S=0;
+    int h = n;
     while (n > 0) {
-        S += pow((n % 10), 2);
+        S += ((n % 10)*(n%10));
         n /= 10;           
     }
-    return ((S>n) ? 1: 2);
+    return ((S>h) ? true: false);
     
 }
 int main(){
