@@ -7,7 +7,7 @@ bool is_composite(int n){
         return false;
     }
     for (int i=2; i<=(pow(n, 0.5)+1); i++){
-        if ( !(n % i) and (n!=i)) return true;
+        if ( !(n % i) && (n!=i)) return true;
     }
     return false;
 }
