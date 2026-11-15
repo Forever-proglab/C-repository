@@ -25,8 +25,9 @@ bool is_more(int n){
 }
 int main(){
     setlocale(LC_ALL, "Russian");
-    int N, n; 
-    cout <<"N="; cin >>N;
+    int N, n, M; 
+    cout <<"N="; cin >>N; cout << "\n";
+    cout <<"M="; cin >>M;
     int a[N], b[N][2];
     for (n=0; n<N; n++){
         cout <<"a["<<n<<"]="; cin>>a[n];
@@ -40,11 +41,13 @@ int main(){
         b[n][1]=0;
     }
     for (n=0; n<N; n++){
+        if (a[n]<=M){
         if (!(is_composite(a[n]))){
             if (is_more(a[n])){
                 b[n][0]=a[n];
                 b[n][1]=S;
             }
+        }
         }
     }
     cout << "Элементы массива b:\n";
