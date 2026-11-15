@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h>
 #include <string>
+#include <locale.h>
 using namespace std;
 bool is_composite(int n){
     if (n<=1){
@@ -22,6 +23,7 @@ bool is_more(int n){
     
 }
 int main(){
+    setlocale(LC_ALL, "Russian");
     int N, n, k=0; 
     cout <<"N="; cin >>N;
     double a[N];
