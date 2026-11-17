@@ -4,7 +4,7 @@
 using namespace std;
 int main(){
     cout << "p\n";
-    cout << 'p'<< '\n';
+    cout << 'p'<< '\n'<<9.0/2;
 /*    struct array
     {
         double x[90];
