@@ -3,14 +3,14 @@
 #include <string>
 #include <locale.h>
 using namespace std;
-bool is_composite(int n){
+bool is_prime(long int n){
     if (n<=1){
-        return true;
+        return false;
     }
-    for (int i=2; i<=(pow(n, 0.5)+1); i++){
-        if ( !(n % i) && (n!=i)) return true;
+    for (long int i=2; i<=(pow(n, 0.5)+1); i++){
+        if ( !(n % i) && (n!=i)) return false;
     }
-    return false;
+    return true;
 }
 double S;
 bool is_more(long int n){
@@ -42,7 +42,7 @@ int main(){
     }
     for (n=0; n<M; n++){
         if (a[n]<=N){
-        if (!(is_composite(a[n]))){
+        if ((is_prime(a[n]))){
             if (is_more(a[n])){
                 b[n][0]=a[n];
                 b[n][1]=S;
