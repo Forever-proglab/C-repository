@@ -13,9 +13,9 @@ bool is_composite(int n){
     return false;
 }
 double S;
-bool is_more(int n){
+bool is_more(long int n){
     S=0;
-    int h = n;
+    long int h = n;
     while (n > 0) {
         S += ((n % 10)*(n%10));
         n /= 10;           
@@ -26,22 +26,22 @@ bool is_more(int n){
 int main(){
     setlocale(LC_ALL, "Russian");
     int N, n, M; 
-    cout <<"N="; cin >>N; cout << "\n";
+    cout <<"N="; cin >>N;
     cout <<"M="; cin >>M;
-    int a[N], b[N][2];
-    for (n=0; n<N; n++){
+    long int a[M], b[M][2];
+    for (n=0; n<M; n++){
         cout <<"a["<<n<<"]="; cin>>a[n];
     }
     cout << "Элементы массива a:\n";
-    for (n=0; n<N; n++){
+    for (n=0; n<M; n++){
         cout <<a[n]<<"\n";
     }
-    for (n=0; n<N; n++){
+    for (n=0; n<M; n++){
         b[n][0]=0;
         b[n][1]=0;
     }
-    for (n=0; n<N; n++){
-        if (a[n]<=M){
+    for (n=0; n<M; n++){
+        if (a[n]<=N){
         if (!(is_composite(a[n]))){
             if (is_more(a[n])){
                 b[n][0]=a[n];
@@ -51,7 +51,7 @@ int main(){
         }
     }
     cout << "Элементы массива b:\n";
-    for (n=0; n<N; n++){
+    for (n=0; n<M; n++){
         if (b[n][0]) cout <<b[n][0]<<" Cумма квадратов цифр числа "<<b[n][0]<<" равна "<<b[n][1]<<"\n";
     }
     return 0;
