@@ -8,7 +8,7 @@ bool is_prime(long int n){
         return false;
     }
     for (long int i=2; i<=(pow(n, 0.5)+1); i++){
-        if ( !(n % i) && (n!=i)) return false;
+        if ( (n % i==0) && (n!=i)) return false;
     }
     return true;
 }
@@ -20,8 +20,8 @@ bool is_more(long int n){
         S += ((n % 10)*(n%10));
         n /= 10;           
     }
-    return ((S>h) ? true: false);
-    
+    if (S>h) return true;
+    return false;
 }
 int main(){
     setlocale(LC_ALL, "Russian");
