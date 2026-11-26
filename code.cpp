@@ -1,21 +1,30 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-int main(){
-    long int k=0, x;
+int main(){    
+    setlocale(LC_ALL, "Russian");
+    long long int k=0, x;
+    double S=1, eps, eps1, t=1;
     cout << "x="; cin>>x;
+    cout << "eps начальное="; cin>>eps;
+    cout << "eps конечное="; cin>>eps1;
     cout << "\n";
-    long double S=1, eps=0.1, t=1;
-    for (eps; eps >= pow(10, -7); ){
-        cout << "S=" <<S<<" "<< "t=" <<t<<" "<< "k=" <<k<<" "<< "eps=" << eps<<"\n";
-        while (abs(t)>eps)
-        {
-            k++;
-            t=t*(-x)/(k*k);
-            S+=t;
-            cout << "S=" <<S<<" "<< "t=" <<t<<" "<< "k=" <<k<<" "<< "eps=" << eps<<"\n";
+    while (eps>=eps1)
+    {
+        //Scout <<"t="<<t<<" S="<<S<<" k="<<k<<" eps="<<eps<<endl;       
+        cout << t << endl;
+        k++;
+        t=t*(-x)/(k*k);
+        if (abs(t)<eps){
+            k=0; 
+            t=1;
+            eps=eps/10;
+            cout<< endl;
+            continue;
         }
-        S=1; t=1; k=0; eps= eps / 10; cout << '\n';
+        S+=t;
     }
+    cout << "S="<< S<< endl;
+
     return 0;
 }
