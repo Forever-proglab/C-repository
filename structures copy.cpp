@@ -11,7 +11,7 @@ struct student
 void input(student &ps)
 {
     string iniz;
-    cout << "Фамилия-"; cin >> ps.name >> iniz;
+    cout << "ФИО-"; cin >> ps.name >> iniz;
     ps.name = ps.name + " " + iniz;
     cout << "Курс-"; cin >> ps.form;
     cout << "Группа-"; cin >> ps.form;
@@ -26,7 +26,7 @@ int main(){
     student st[N];
     int n, i, k=0; string gr;
     cout << "Число задолжников-"; cin >> n;
-    for (i=0; i<n; i++) input(st[i]); for (i=0; i<n; i++) output(st[i]);
+    for (i=0; i<n; i++) input(st[i]); for (i=0; i<n; i++) output(st[i], n);
         cout << "Число задолжников-"; cin >> n;
     cout << "Группа-"; cin >> gr;
     for (i=0; i<n; i++) if (st[i].group==gr){
