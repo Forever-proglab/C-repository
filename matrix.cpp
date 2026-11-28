@@ -24,9 +24,12 @@ int main(){
     }
     for (i=0; i<(N*N); i++){
         b[i]=0;
-    }
+    }/*
+    for (i=N-1; i>=0; i--){
+        b[i][0]=;
+    }*/
     for (i=0; i<(N*N); i++){
-        b[i]=0;
+        
     }
     return 0;
 }
